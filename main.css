@@ -41,3 +41,13 @@
     background: #bebebe;
     cursor: pointer;
 }
+
+.laba-list a {
+    width: 100%;
+    color: black;
+}
+
+.laba-list a:link {
+    text-decoration: none;
+    color: black;
+}
