@@ -1,0 +1,43 @@
+.main-container {
+     padding: 30px 50px;
+     display: flex;
+     justify-content: center;
+     min-height: 50vh;
+     min-width: 50vw;
+}
+
+.labs-card {
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px rgb(165, 165, 165);
+    padding: 30px;
+}
+
+.laba-list-title {
+    font-size: 28px;
+    text-align: center;
+}
+
+.laba-list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    width: 300px;
+}
+
+.laba-list li {
+    font-size: 20px;
+    min-height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgb(225, 225, 225);
+}
+
+.laba-list li:hover {
+    background: #bebebe;
+    cursor: pointer;
+}
