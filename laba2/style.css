@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+.second-task-container{
+    padding: 20px;
+    display: flex;
+    gap: 5%;
+}
+
+.red-square {
+    --square-side: 200px;
+    width: var(--square-side);
+    height: var(--square-side);
+    background: #CC0000;
+}
+
+.horizontal-rectangular, .vertical-rectangular {
+    background: white;
+    border-radius: 6px;
+}
+
+.horizontal-rectangular{
+    width: 56%;
+    height: 21%;
+}
+
+.vertical-rectangular {
+    width: 21%;
+    height: 56%;
+}
+
+
+/* with position */
+
+.red-square.position{
+    position: relative;
+}
+
+.horizontal-rectangular.position {
+    position: absolute;
+    top: 39.5%;
+    left: 22%;
+}
+
+.vertical-rectangular.position {
+    position: absolute;
+    top: 22%;
+    left: 39.5%;
+}
+
+
+/* with transform */
+
+.horizontal-rectangular.transform {
+    transform: translate(39.3%, 188.1%);
+}
+
+.vertical-rectangular.transform {
+    transform: translate(188.1%, 1.8%);
+}
