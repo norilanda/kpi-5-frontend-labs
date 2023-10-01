@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Макарчук Л. О. ІП-13 Лабораторна 2</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      table,
+      tr,
+      td {
+        border: 2px solid black;
+        border-collapse: collapse;
+        font-size: 21px;
+      }
+      table {
+        width: 100%;
+      }
+      td {
+        height: 40px;
+        width: 25%;
+      }
+      .first-row {
+        background: #228f8f;
+        color: #de824b;
+      }
+      .first-row:hover {
+        background: #de824b;
+        color: #228f8f;
+      }
+      .second-row {
+        background: #f5f522;
+        color: #934bde;
+      }
+      .second-row:hover {
+        background: #934bde;
+        color: #f5f522;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table>
+      <tr class="first-row">
+        <td rowspan="3">Макарчук</td>
+        <td>Лідія</td>
+        <td rowspan="3">Олександрівна</td>
+        <td>ІП-13</td>
+      </tr>
+      <tr class="second-row">
+        <td>Лабораторна №2</td>
+        <td>Варіант 2</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td colspan="2"></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <div class="second-task-container">
+      <div class="red-square position">
+        <div class="horizontal-rectangular position"></div>
+        <div class="vertical-rectangular position"></div>
+      </div>
+
+      <div class="red-square transform">
+        <div class="horizontal-rectangular transform"></div>
+        <div class="vertical-rectangular transform"></div>
+      </div>
+    </div>
+  </body>
+</html>
