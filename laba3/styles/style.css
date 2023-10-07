@@ -1,0 +1,15 @@
+
+.first-block > .image {
+    width: 50%;
+    float: left;
+    min-height: 250px;
+}
+
+.first-block > .text {
+    width: 50%;
+    float: right;
+}
+
+.second-block, .third-block {
+    width: 100%;
+}

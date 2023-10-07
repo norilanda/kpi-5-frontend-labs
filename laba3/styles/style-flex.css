@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.first-block {
+    display: flex;
+}
+
+.first-block > .image {
+    width: 50%;
+}
+
+.first-block > .text {
+    width: 50%;
+}
