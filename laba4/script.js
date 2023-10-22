@@ -1,5 +1,13 @@
 // FIRST TASK
 
+const firstElement = document.getElementById("first-element");
+const secondElement = document.querySelector("#second-element");
+
+firstElement.addEventListener("click", () => changeColorOnClick(firstElement));
+secondElement.addEventListener("click", () =>
+  changeColorOnClick(secondElement)
+);
+
 // functions
 
 function changeColor(element, elementColor, textColor) {
@@ -19,18 +27,6 @@ function changeColorOnClick(element) {
   const newTextColor = generateNewColor(newBackgroundColor);
   changeColor(element, newBackgroundColor, newTextColor);
 }
-
-// selecting elements
-
-const firstElement = document.getElementById("first-element");
-const secondElement = document.querySelector("#second-element");
-
-// adding event listeners
-
-firstElement.addEventListener("click", () => changeColorOnClick(firstElement));
-secondElement.addEventListener("click", () =>
-  changeColorOnClick(secondElement)
-);
 
 // ==============================================================================
 // SECOND TASK
