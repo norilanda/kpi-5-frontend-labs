@@ -8,7 +8,7 @@
     <title>Макарчук Л. О. ІП-13 Лабораторна 4</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="main-container">
     <h2>Макарчук Лідія Олександрівна</h2>
     <p>Місце народження: 3 листопада, 2003 року, м. Київ</p>
     <p id="first-element">Освіта: НТУУ КПІ, м. Київ</p>
@@ -33,9 +33,17 @@
       транспортний, освітньо-науковий, історичний, культурний та духовний центр
       України.
     </p>
-    <a href="https://kyivcity.gov.ua/"
-      ><img src="image.jpg" alt="Kyiv" width="512" height="384"
-    /></a>
+
+    <div id="images-container">
+      <img src="image.jpg" alt="Kyiv" width="512" height="384" />
+    </div>
+
+    <div class="image-buttons-container">
+      <button id="btn-add">Додати</button>
+      <button id="btn-increase">Збільшити</button>
+      <button id="btn-decrease">Зменшити</button>
+      <button id="btn-delete">Видалити</button>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
