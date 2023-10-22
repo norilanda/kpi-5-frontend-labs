@@ -1,0 +1,13 @@
+.main-container {
+    padding: 15px 30px;
+}
+
+.image-buttons-container{
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#first-element:hover, #second-element:hover {
+    cursor: pointer;
+}
