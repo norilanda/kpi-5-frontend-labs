@@ -1,0 +1,21 @@
+.main-container {
+    padding: 15px 30px;
+    display: flex;
+}
+
+form, .title-task-one {
+    font-size: 18px;
+}
+
+input {
+    font-size: 16px;
+}
+
+.labeled-field{
+    padding-bottom: 10px;
+}
+
+.input-error {
+    border: 2px solid red;
+}
+
