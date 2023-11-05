@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Макарчук Л. О. ІП-13 Лабораторна 5</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="main-container">
+    <div>
+      <p class="title-task-one">Форма (варіант 2)</p>
+      <form id="first-form">
+        <div class="labeled-field">
+          <label for="name">ПІБ:</label><br />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Прізвище І. Б."
+            required
+            pattern="^\p{Lu}\p{Ll}+( \p{Lu}\.){2}$"
+          /><br />
+        </div>
+        <div class="labeled-field">
+          <label for="group">Група:</label><br />
+          <input
+            type="text"
+            id="group"
+            name="group"
+            placeholder="ІП-13"
+            required
+            pattern="^\p{Lu}{2}-\d\d$"
+          /><br />
+        </div>
+        <div class="labeled-field">
+          <label for="phone">Телефон:</label><br />
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="(000)-000-00-00"
+            required
+            pattern="^\(\d{3}\)-\d{3}(-\d\d){2}$"
+          /><br />
+        </div>
+        <div class="labeled-field">
+          <label for="id-card">ID-card:</label><br />
+          <input
+            type="text"
+            id="id-card"
+            name="id-card"
+            placeholder="ТТ №000000"
+            required
+            pattern="^\p{Lu}{2} №\d{6}$"
+          /><br />
+        </div>
+        <div class="labeled-field">
+          <label for="faculty">Факультет:</label><br />
+          <input
+            type="text"
+            id="faculty"
+            name="faculty"
+            placeholder="ФІОТ"
+            required
+            pattern="^\p{Lu}{4}$"
+          /><br />
+        </div>
+
+        <br />
+        <input type="submit" value="Submit" id="first-form-submit-button" />
+      </form>
+    </div>
+
+    <div>
+      <div class="labeled-field">
+        <label for="color-picker">Choose Color</label><br />
+        <input
+          type="color"
+          name="color-picker"
+          id="color-picker"
+          value="#00dd00"
+        />
+      </div>
+      <table id="6x6-table"></table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

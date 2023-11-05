@@ -1,0 +1,41 @@
+.main-container {
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+form, .title-task-one, .labeled-field {
+    font-size: 18px;
+}
+
+input {
+    font-size: 16px;
+}
+
+.labeled-field{
+    padding-bottom: 10px;
+}
+
+.input-error {
+    border: 2px solid red;
+}
+
+
+#color {
+    width: 100px;
+    height: 50px;
+}
+
+table,
+tr,
+td {
+border: 2px solid black;
+border-collapse: collapse;
+font-size: 21px;
+}
+
+td {
+--cell-side: 40px;
+height: var(--cell-side);
+width: var(--cell-side);
+}
