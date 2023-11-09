@@ -1,0 +1,23 @@
+.hide {
+    display: none;
+}
+
+.pulse-animation {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(255, 98, 0);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
