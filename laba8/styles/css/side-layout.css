@@ -1,0 +1,35 @@
+.aside-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.streamers {
+  overflow: auto;
+  flex: 1;
+  background-color: #f7f7f7;
+}
+.streamers::-webkit-scrollbar {
+  width: 5px;
+  display: block;
+}
+.streamers::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 3px;
+}
+
+.streamers:hover::-webkit-scrollbar {
+  width: 5px;
+  display: block;
+}
+.streamers:hover::-webkit-scrollbar-thumb {
+  background-color: #b8b8b8;
+  border-radius: 3px;
+}
+
+.info-section {
+  flex: 0 0 150px;
+  height: 200px;
+  padding: 20px;
+  background-color: #f7f7f7;
+}

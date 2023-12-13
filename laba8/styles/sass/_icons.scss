@@ -1,0 +1,37 @@
+@mixin icon($height, $hover-color: null) {
+  height: $height;
+  &:hover {
+    cursor: pointer;
+    @if ($hover-color) {
+      fill: $hover-color;
+    }
+  }
+}
+
+@mixin tiny-icon($hover-color: null) {
+  @include icon(15px, $hover-color);
+}
+
+@mixin small-icon($hover-color: null) {
+  @include icon(28px, $hover-color);
+}
+
+@mixin medium-icon($hover-color: null) {
+  @include icon(38px, $hover-color);
+}
+
+@mixin icon-in-circle($circle-color: transparent, $hover-color: null) {
+  background-color: $circle-color;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  svg {
+    @include tiny-icon($hover-color);
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,129 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.header-container svg {
+  height: 28px;
+  fill: #b8b8b8;
+}
+.header-container svg:hover {
+  cursor: pointer;
+  fill: #999999;
+}
+
+.logo,
+.header-actions {
+  flex: 0 0 content;
+  max-width: 270px;
+  min-width: 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-weight: 550;
+  letter-spacing: -2px;
+  overflow: hidden;
+  color: #f6af44;
+}
+.logo span {
+  display: inline-block;
+  transform: scaleY(1.5);
+}
+.logo svg {
+  height: 100%;
+  fill: #f6af44;
+}
+
+.search-box-container {
+  flex: 1 1 content;
+  max-width: 500px;
+  min-width: 170px;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.search-box-container svg {
+  margin: auto;
+  flex-shrink: 0;
+}
+
+.header-actions {
+  gap: 17px;
+}
+
+.header-container .dropdown {
+  background-color: #f6af44;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.header-container .dropdown svg {
+  height: 15px;
+}
+.header-container .dropdown svg:hover {
+  cursor: pointer;
+}
+.header-container .dropdown:hover {
+  cursor: pointer;
+}
+.header-container .dropdown svg {
+  fill: black;
+}
+
+.header-container .dropdown:hover {
+  background-color: #b8b8b8;
+}
+
+@media (max-width: 620px) {
+  .logo {
+    flex-shrink: 1;
+    font-size: 1.5rem;
+  }
+  .logo span {
+    transform: scaleY(1);
+  }
+  .search-box-container {
+    padding: 5px 7px;
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 500px) {
+  .header-container {
+    height: -moz-fit-content;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px 20px;
+    grid-template-areas: "logo actions" "search search";
+  }
+  .header-container svg {
+    max-height: 24px;
+  }
+  .logo {
+    grid-area: logo;
+    justify-content: start;
+  }
+  .header-actions {
+    grid-area: actions;
+    justify-content: end;
+  }
+  .search-box-container {
+    grid-area: search;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header-container .dropdown {
+    max-height: 24px;
+    max-width: 24px;
+  }
+}

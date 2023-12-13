@@ -1,0 +1,87 @@
+@import "scrollbar";
+@import "colors";
+@import "text-styles";
+
+$border-radius: 10px;
+
+.carousel-container {
+  max-height: 300px;
+}
+
+.carousel-container ul {
+  display: flex;
+  list-style: none;
+  max-width: 750px;
+  min-width: 210px;
+  max-height: 80%;
+  min-height: 130px;
+  aspect-ratio: 11/4;
+
+  margin-block: 2rem;
+  margin-inline: auto;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  @include hide-scrollbar;
+}
+
+.carousel-container li {
+  display: grid;
+  grid-template-columns: 60% auto;
+  height: 100%;
+  width: 73%;
+
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  background-color: $primary-middle-color;
+  border-radius: $border-radius;
+  img,
+  .overlay {
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+  }
+}
+
+.carousel-item-shadow {
+  z-index: 1;
+  box-shadow: 10px 0px 13px $primary-dark-3-color;
+  border-top-right-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+}
+
+.carousel-video-description {
+  padding: 13px;
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+    "avatar title"
+    "avatar name"
+    "description description";
+  column-gap: 13px;
+  img {
+    grid-area: avatar;
+  }
+}
+
+.carousel-video-description .video-description {
+  grid-area: description;
+  font-size: 0.9rem;
+  font-weight: 200;
+  color: $primary-dark-3-color;
+  overflow: hidden;
+  max-height: 80px;
+}
+
+.carousel-video-description .video-description::selection {
+  @include secondary-text-style;
+}
+
+@media (max-width: 700px) {
+  .carousel-container ul {
+    height: 90%;
+    aspect-ratio: 14/6;
+    padding-left: 0;
+  }
+  .carousel-container li {
+    width: 88%;
+  }
+}

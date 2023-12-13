@@ -1,0 +1,39 @@
+@import "icons";
+@import "colors";
+
+$border-width: 2px;
+
+.search-form {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+}
+
+.search-input {
+  height: 100%;
+  flex: 1;
+  padding: 5px;
+  border: $border-width solid $primary-dark-color;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.search-input:focus {
+  outline: none;
+  border: $border-width solid $secondary-color;
+}
+
+.search-button {
+  min-width: 40px;
+  height: 100%;
+  border: $border-width solid $primary-dark-color;
+  border-left: 0px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: $primary-color;
+  cursor: pointer;
+  svg {
+    @include tiny-icon($primary-text-color);
+    fill: $primary-text-color;
+  }
+}

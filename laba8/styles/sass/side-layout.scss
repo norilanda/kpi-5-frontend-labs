@@ -1,0 +1,27 @@
+@import "sizes";
+@import "colors";
+@import "scrollbar";
+
+.aside-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.streamers {
+  @include transparent-scrollbar;
+  overflow: auto;
+  flex: 1;
+  background-color: $primary-color;
+}
+
+.streamers:hover {
+  @include show-scrollbar;
+}
+
+.info-section {
+  flex: 0 0 150px;
+  height: 200px;
+  padding: $main-side-padding;
+  background-color: $primary-color;
+}

@@ -1,0 +1,64 @@
+.streamers > ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.streamers li {
+  height: 75px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+.streamers li div {
+  margin-top: auto;
+  margin-bottom: auto;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.streamers li:hover {
+  background-color: #dfdfdf;
+}
+
+.streamers div::-moz-selection {
+  background-color: #f6af44;
+  color: white;
+}
+
+.streamers div::selection {
+  background-color: #f6af44;
+  color: white;
+}
+
+.streamer-avatar-name {
+  display: flex;
+  gap: 10px;
+}
+.streamer-avatar-name div {
+  max-width: 75px;
+  text-overflow: ellipsis;
+}
+
+.streamer-avatar-name:hover {
+  color: #32328f;
+  cursor: pointer;
+}
+
+.activity-indicator {
+  padding: 2px 0px 2px 4px;
+  display: flex;
+}
+
+.activity-indicator div:last-child {
+  max-width: 75px;
+  padding-left: 7px;
+}
+
+@media (max-width: 1200px) {
+  .streamer-avatar-name div:last-child,
+  .activity-indicator {
+    display: none;
+  }
+}

@@ -1,0 +1,17 @@
+@import "colors";
+
+@mixin primary-text-style {
+  background-color: $primary-color;
+  color: $primary-text-color;
+}
+
+@mixin secondary-text-style {
+  background-color: $secondary-color;
+  color: $secondary-text-color;
+}
+
+@mixin ellipsis-text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

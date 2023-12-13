@@ -1,0 +1,87 @@
+.carousel-container {
+  max-height: 300px;
+}
+
+.carousel-container ul {
+  display: flex;
+  list-style: none;
+  max-width: 750px;
+  min-width: 210px;
+  max-height: 80%;
+  min-height: 130px;
+  aspect-ratio: 11/4;
+  margin-block: 2rem;
+  margin-inline: auto;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  scrollbar-color: transparent;
+}
+.carousel-container ul::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-container li {
+  display: grid;
+  grid-template-columns: 60% auto;
+  height: 100%;
+  width: 73%;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  background-color: #dfdfdf;
+  border-radius: 10px;
+}
+.carousel-container li img,
+.carousel-container li .overlay {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.carousel-item-shadow {
+  z-index: 1;
+  box-shadow: 10px 0px 13px #777777;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.carousel-video-description {
+  padding: 13px;
+  margin: auto;
+  display: grid;
+  grid-template-areas: "avatar title" "avatar name" "description description";
+  -moz-column-gap: 13px;
+       column-gap: 13px;
+}
+.carousel-video-description img {
+  grid-area: avatar;
+}
+
+.carousel-video-description .video-description {
+  grid-area: description;
+  font-size: 0.9rem;
+  font-weight: 200;
+  color: #777777;
+  overflow: hidden;
+  max-height: 80px;
+}
+
+.carousel-video-description .video-description::-moz-selection {
+  background-color: #f6af44;
+  color: white;
+}
+
+.carousel-video-description .video-description::selection {
+  background-color: #f6af44;
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .carousel-container ul {
+    height: 90%;
+    aspect-ratio: 14/6;
+    padding-left: 0;
+  }
+  .carousel-container li {
+    width: 88%;
+  }
+}

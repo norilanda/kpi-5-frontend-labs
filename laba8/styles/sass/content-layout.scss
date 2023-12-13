@@ -1,0 +1,55 @@
+@import "scrollbar";
+@import "sizes";
+@import "colors";
+@import "text-styles";
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container > nav {
+  @include hide-scrollbar;
+  flex: 0 0 $side-card-height;
+  max-height: $side-card-height;
+  overflow-x: auto;
+  white-space: nowrap;
+  background-color: $base-color;
+}
+
+.categories {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  li {
+    padding: 8px 17px 8px 17px;
+    @include primary-text-style;
+    border-radius: 19px;
+    border: 2px solid $primary-dark-color;
+    font-size: 1.12rem;
+  }
+  li:hover {
+    background-color: $primary-middle-color;
+    cursor: pointer;
+  }
+  li:first-child {
+    @include secondary-text-style;
+    border-color: $secondary-dark-color;
+  }
+  li:first-child:hover {
+    @include secondary-text-style;
+    background-color: $secondary-middle-color;
+  }
+}
+
+.videos-container {
+  display: grid;
+  row-gap: 13px;
+  column-gap: 13px;
+  grid-template-columns: repeat(auto-fit, minmax($video-width, 1fr));
+}

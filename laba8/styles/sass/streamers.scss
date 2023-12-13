@@ -1,0 +1,61 @@
+@import "sizes";
+@import "text-styles";
+@import "colors";
+
+.streamers > ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.streamers li {
+  height: $side-card-height;
+  padding: 15px $main-side-padding;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  div {
+    margin-top: auto;
+    margin-bottom: auto;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.streamers li:hover {
+  background-color: $primary-middle-color;
+}
+
+.streamers div::selection {
+  @include secondary-text-style;
+}
+
+.streamer-avatar-name {
+  display: flex;
+  gap: 10px;
+  div {
+    max-width: 75px;
+    text-overflow: ellipsis;
+  }
+}
+
+.streamer-avatar-name:hover {
+  color: $complementary-color;
+  cursor: pointer;
+}
+
+.activity-indicator {
+  padding: 2px 0px 2px 4px;
+  display: flex;
+}
+.activity-indicator div:last-child {
+  max-width: 75px;
+  padding-left: 7px;
+}
+
+@media (max-width: 1200px) {
+  .streamer-avatar-name div:last-child,
+  .activity-indicator {
+    display: none;
+  }
+}

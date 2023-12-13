@@ -1,0 +1,14 @@
+@mixin avatar($radius) {
+  width: $radius;
+  height: $radius;
+  border-radius: 50%;
+  margin: auto;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.small-avatar {
+  @include avatar(40px);
+}

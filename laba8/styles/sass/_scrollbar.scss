@@ -1,0 +1,30 @@
+@import "colors";
+@import "sizes";
+
+@mixin hide-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+  scrollbar-color: transparent;
+}
+
+@mixin scrollbar($color) {
+  &::-webkit-scrollbar {
+    width: $scrollbar-width;
+    display: block;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color;
+    border-radius: 3px;
+  }
+}
+
+@mixin transparent-scrollbar {
+  @include scrollbar(transparent);
+}
+
+@mixin show-scrollbar {
+  @include scrollbar($primary-dark-color);
+}

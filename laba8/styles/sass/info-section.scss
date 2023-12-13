@@ -1,0 +1,43 @@
+@import "colors";
+@import "text-styles";
+@import "icons";
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.info-container div:first-child {
+  flex-grow: 1;
+  text-align: center;
+  overflow: hidden;
+  padding: 15px 15px 4px 15px;
+  font-size: 1.2rem;
+  @include primary-text-style;
+  background-color: $primary-middle-color;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.info-container div:first-child::selection {
+  @include secondary-text-style;
+}
+
+.icons-container {
+  padding: 13px 15px;
+  display: flex;
+  justify-content: space-evenly;
+  svg {
+    @include small-icon($secondary-color);
+  }
+  background-color: $primary-middle-color;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+@media (max-width: 1200px) {
+  .info-container {
+    display: none;
+  }
+}
